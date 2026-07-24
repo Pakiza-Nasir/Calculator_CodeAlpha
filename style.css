@@ -1,0 +1,142 @@
+/* Google Font Import */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #0b0914; 
+    background-image: 
+        radial-gradient(circle at 15% 15%, rgba(139, 92, 246, 0.15) 0%, transparent 45%),
+        radial-gradient(circle at 85% 85%, rgba(236, 72, 153, 0.12) 0%, transparent 45%);
+}
+
+/* Calculator Box with Glowing Purple Border */
+.calculator {
+    background: #13111c;
+    padding: 28px;
+    border-radius: 28px;
+    border: 2px solid #a855f7;
+    box-shadow: 
+        0 0 25px rgba(168, 85, 247, 0.3), 
+        0 20px 50px rgba(0, 0, 0, 0.8);
+        
+    width: 350px;
+}
+
+/* Display Screen Styling */
+.display {
+    background: #0b0914;
+    border-radius: 18px;
+    padding: 22px;
+    text-align: right;
+    margin-bottom: 24px;
+    word-wrap: break-word;
+    word-break: break-all;
+    min-height: 105px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    border: 1px solid rgba(168, 85, 247, 0.3);
+    box-shadow: inset 0 2px 10px rgba(0, 0, 0, 0.7);
+}
+
+.previous-operand {
+    color: #8b5cf6;
+    font-size: 1.1rem;
+    font-weight: 500;
+    min-height: 24px;
+    letter-spacing: 0.5px;
+}
+
+.current-operand {
+    color: #f472b6; 
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-shadow: 0 0 12px rgba(244, 114, 182, 0.3);
+}
+
+/* Grid Layout */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+}
+
+/* Base Button Styling */
+.btn {
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    outline: none;
+    padding: 18px;
+    font-size: 1.3rem;
+    font-weight: 600;
+    border-radius: 16px;
+    cursor: pointer;
+    background: #1c1827;
+    color: #f3e8ff;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Button Hover & Active Animations */
+.btn:hover {
+    background: #2a243a;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+    color: #ffffff;
+}
+
+.btn:active {
+    transform: translateY(-1px);
+}
+
+/* Clear / Action Buttons (AC, DEL) */
+.btn-action {
+    background: rgba(239, 68, 68, 0.15);
+    color: #f87171;
+    border: 1px solid rgba(239, 68, 68, 0.4);
+}
+
+.btn-action:hover {
+    background: #ef4444;
+    color: #ffffff;
+    box-shadow: 0 0 18px rgba(239, 68, 68, 0.6);
+}
+
+/* Operator Buttons (+, -, ×, ÷, %) */
+.btn-operator {
+    background: rgba(168, 85, 247, 0.18);
+    color: #c084fc;
+    border: 1px solid rgba(168, 85, 247, 0.4);
+}
+
+.btn-operator:hover {
+    background: #9333ea;
+    color: #ffffff;
+    box-shadow: 0 0 20px rgba(168, 85, 247, 0.6);
+}
+
+/* Equal Button (=) */
+.btn-equal {
+    grid-column: span 2;
+    background: #ec4899;
+    color: #ffffff;
+    font-weight: 700;
+    border: 1px solid #f472b6;
+    box-shadow: 0 0 15px rgba(236, 72, 153, 0.4);
+}
+
+.btn-equal:hover {
+    background: #db2777;
+    box-shadow: 0 0 25px rgba(236, 72, 153, 0.7);
+}
